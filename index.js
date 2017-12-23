@@ -6,12 +6,8 @@ const mongoose = require('mongoose');
 const app = express();
 
 // connect to mongodb
-// mongoose.connect('mongodb://localhost/ninjago', {
-//   useMongoClient: true,
-// });
-mongoose.connect(process.env.MONGODB_URI, function(error) {
-    if (error) console.error(error);
-    else console.log('mongo connected');
+mongoose.connect('mongodb://localhost/ninjago', {
+  useMongoClient: true,
 });
 
 mongoose.Promise = global.Promise;
@@ -29,6 +25,7 @@ app.use(function(err, req, res, next){
 });
 
 // listen for request
-app.listen(process.env.PORT || port, function (){
-  console.log('now listening for request hey hey');
-});
+// app.listen(process.env.PORT || 4000, function (){
+//   console.log('now listening for request hey hey');
+// });
+app.listen(process.env.PORT);
