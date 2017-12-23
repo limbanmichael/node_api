@@ -6,13 +6,13 @@ const mongoose = require('mongoose');
 const app = express();
 
 // connect to mongodb
-// mongoose.connect('mongodb://localhost/ninjago', {
-//   useMongoClient: true,
-// });
-mongoose.connect(process.env.MONGODB_URI, function(error) {
-    if (error) console.error(error);
-    else console.log('mongo connected');
+mongoose.connect('ds163806.mlab.com:63806/heroku_ztgtfg25', {
+  useMongoClient: true,
 });
+// mongoose.connect(process.env.MONGODB_URI, function(error) {
+//     if (error) console.error(error);
+//     else console.log('mongo connected');
+// });
 
 mongoose.Promise = global.Promise;
 
