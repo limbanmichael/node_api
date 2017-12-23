@@ -6,8 +6,7 @@ const mongoose = require('mongoose');
 const app = express();
 
 // connect to mongodb
-var uri = 'mongodb://miklimban1993:p@ssw0rd123@ds163806.mlab.com:63806/heroku_ztgtfg25';
-// mongoose.connect(uri);
+var uri = 'mongodb://michael:Michael1993@ds163826.mlab.com:63826/node_api';
 mongoose.connect(uri, {
   useMongoClient: true,
 });
