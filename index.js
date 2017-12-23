@@ -6,9 +6,11 @@ const mongoose = require('mongoose');
 const app = express();
 
 // connect to mongodb
-mongoose.connect('mongodb://miklimban1993:p@ssw0rd123@ds163806.mlab.com:63806/heroku_ztgtfg25', {
-  useMongoClient: true,
-});
+var uri = 'mongodb:miklimban1993:p@ssw0rd123@ds163806.mlab.com:63806/heroku_ztgtfg25';
+mongoose.connect(uri);
+// mongoose.connect('mongodb://miklimban1993:p@ssw0rd123@ds163806.mlab.com:63806/heroku_ztgtfg25', {
+//   useMongoClient: true,
+// });
 // mongoose.connect(process.env.MONGODB_URI, function(error) {
 //     if (error) console.error(error);
 //     else console.log('mongo connected');
